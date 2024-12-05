@@ -8,12 +8,12 @@
    vars:
      keypair: mySep22Key
      instance_type: t2.micro
-     image: ami-0ee23bfc74a881de5
+     image: ami-053b12d3152c0cc71
      wait: yes
      group: webserver
      count: 1
-     region: us-east-1
-     security_group: ec2-security-group
+     region: ap-south-1
+     security_group: ec2-security-vibin
    
    tasks:
 
@@ -60,4 +60,4 @@
        with_items: "{{ ec2.instances }}"
        args:
          tags:
-           Name: MyTargetEc2Instance
+           Name: Myansibleplaybook
